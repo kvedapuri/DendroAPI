@@ -1,0 +1,253 @@
+(node:6089) [SEQUELIZE0004] DeprecationWarning: A boolean value was passed to options.operatorsAliases. This is a no-op with v5 and should be removed.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Server is running on port 8080.
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'dendrodb'
+Executing (default): SHOW INDEX FROM `users`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'roles' AND TABLE_SCHEMA = 'dendrodb'
+Executing (default): SHOW INDEX FROM `roles`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'plants' AND TABLE_SCHEMA = 'dendrodb'
+Executing (default): SHOW INDEX FROM `plants`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'user_roles' AND TABLE_SCHEMA = 'dendrodb'
+Executing (default): SHOW INDEX FROM `user_roles`
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'karthik' LIMIT 1;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'karthik.vedapuri@gmail.com' LIMIT 1;
+Executing (default): INSERT INTO `users` (`id`,`username`,`email`,`password`,`question`,`answer`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?);
+Executing (default): SELECT `createdAt`, `updatedAt`, `roleId`, `userId` FROM `user_roles` AS `user_roles` WHERE `user_roles`.`userId` = 2;
+Executing (default): INSERT INTO `user_roles` (`createdAt`,`updatedAt`,`roleId`,`userId`) VALUES ('2023-04-06 16:56:40','2023-04-06 16:56:40',1,2);
+(node:6089) UnhandledPromiseRejectionWarning: Error
+    at Query.run (/home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MySQLQueryInterface.bulkInsert (/home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/dialects/abstract/query-interface.js:346:21)
+    at async recursiveBulkCreate (/home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/model.js:1663:25)
+    at async Function.bulkCreate (/home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/model.js:1752:12)
+    at async Promise.all (index 0)
+    at async BelongsToMany.set (/home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/associations/belongs-to-many.js:452:14)
+(node:6089) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:6089) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'karthik' LIMIT 1;
+Executing (default): SELECT `roles`.`id`, `roles`.`name`, `roles`.`createdAt`, `roles`.`updatedAt`, `user_roles`.`createdAt` AS `user_roles.createdAt`, `user_roles`.`updatedAt` AS `user_roles.updatedAt`, `user_roles`.`roleId` AS `user_roles.roleId`, `user_roles`.`userId` AS `user_roles.userId` FROM `roles` AS `roles` INNER JOIN `user_roles` AS `user_roles` ON `roles`.`id` = `user_roles`.`roleId` AND `user_roles`.`userId` = 2;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'karthik' LIMIT 1;
+Executing (default): SELECT `roles`.`id`, `roles`.`name`, `roles`.`createdAt`, `roles`.`updatedAt`, `user_roles`.`createdAt` AS `user_roles.createdAt`, `user_roles`.`updatedAt` AS `user_roles.updatedAt`, `user_roles`.`roleId` AS `user_roles.roleId`, `user_roles`.`userId` AS `user_roles.userId` FROM `roles` AS `roles` INNER JOIN `user_roles` AS `user_roles` ON `roles`.`id` = `user_roles`.`roleId` AND `user_roles`.`userId` = 2;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 6;
+(node:6147) [SEQUELIZE0004] DeprecationWarning: A boolean value was passed to options.operatorsAliases. This is a no-op with v5 and should be removed.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Server is running on port 8080.
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'dendrodb'
+Executing (default): SHOW INDEX FROM `users`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'roles' AND TABLE_SCHEMA = 'dendrodb'
+Executing (default): SHOW INDEX FROM `roles`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'plants' AND TABLE_SCHEMA = 'dendrodb'
+Executing (default): SHOW INDEX FROM `plants`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'user_roles' AND TABLE_SCHEMA = 'dendrodb'
+Executing (default): SHOW INDEX FROM `user_roles`
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'karthik' LIMIT 1;
+Executing (default): SELECT `roles`.`id`, `roles`.`name`, `roles`.`createdAt`, `roles`.`updatedAt`, `user_roles`.`createdAt` AS `user_roles.createdAt`, `user_roles`.`updatedAt` AS `user_roles.updatedAt`, `user_roles`.`roleId` AS `user_roles.roleId`, `user_roles`.`userId` AS `user_roles.userId` FROM `roles` AS `roles` INNER JOIN `user_roles` AS `user_roles` ON `roles`.`id` = `user_roles`.`roleId` AND `user_roles`.`userId` = 2;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'Prakru' LIMIT 1;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'Prakru@gmail.com' LIMIT 1;
+Executing (default): INSERT INTO `users` (`id`,`username`,`email`,`password`,`question`,`answer`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?);
+Executing (default): SELECT `createdAt`, `updatedAt`, `roleId`, `userId` FROM `user_roles` AS `user_roles` WHERE `user_roles`.`userId` = 3;
+Executing (default): INSERT INTO `user_roles` (`createdAt`,`updatedAt`,`roleId`,`userId`) VALUES ('2023-04-06 17:10:01','2023-04-06 17:10:01',1,3);
+(node:6147) UnhandledPromiseRejectionWarning: Error
+    at Query.run (/home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MySQLQueryInterface.bulkInsert (/home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/dialects/abstract/query-interface.js:346:21)
+    at async recursiveBulkCreate (/home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/model.js:1663:25)
+    at async Function.bulkCreate (/home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/model.js:1752:12)
+    at async Promise.all (index 0)
+    at async BelongsToMany.set (/home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/associations/belongs-to-many.js:452:14)
+(node:6147) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:6147) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'prakru' LIMIT 1;
+Executing (default): SELECT `roles`.`id`, `roles`.`name`, `roles`.`createdAt`, `roles`.`updatedAt`, `user_roles`.`createdAt` AS `user_roles.createdAt`, `user_roles`.`updatedAt` AS `user_roles.updatedAt`, `user_roles`.`roleId` AS `user_roles.roleId`, `user_roles`.`userId` AS `user_roles.userId` FROM `roles` AS `roles` INNER JOIN `user_roles` AS `user_roles` ON `roles`.`id` = `user_roles`.`roleId` AND `user_roles`.`userId` = 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'prakru' LIMIT 1;
+Executing (default): SELECT `roles`.`id`, `roles`.`name`, `roles`.`createdAt`, `roles`.`updatedAt`, `user_roles`.`createdAt` AS `user_roles.createdAt`, `user_roles`.`updatedAt` AS `user_roles.updatedAt`, `user_roles`.`roleId` AS `user_roles.roleId`, `user_roles`.`userId` AS `user_roles.userId` FROM `roles` AS `roles` INNER JOIN `user_roles` AS `user_roles` ON `roles`.`id` = `user_roles`.`roleId` AND `user_roles`.`userId` = 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'prakru' LIMIT 1;
+Executing (default): SELECT `roles`.`id`, `roles`.`name`, `roles`.`createdAt`, `roles`.`updatedAt`, `user_roles`.`createdAt` AS `user_roles.createdAt`, `user_roles`.`updatedAt` AS `user_roles.updatedAt`, `user_roles`.`roleId` AS `user_roles.roleId`, `user_roles`.`userId` AS `user_roles.userId` FROM `roles` AS `roles` INNER JOIN `user_roles` AS `user_roles` ON `roles`.`id` = `user_roles`.`roleId` AND `user_roles`.`userId` = 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'prakru' LIMIT 1;
+Executing (default): SELECT `roles`.`id`, `roles`.`name`, `roles`.`createdAt`, `roles`.`updatedAt`, `user_roles`.`createdAt` AS `user_roles.createdAt`, `user_roles`.`updatedAt` AS `user_roles.updatedAt`, `user_roles`.`roleId` AS `user_roles.roleId`, `user_roles`.`userId` AS `user_roles.userId` FROM `roles` AS `roles` INNER JOIN `user_roles` AS `user_roles` ON `roles`.`id` = `user_roles`.`roleId` AND `user_roles`.`userId` = 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 6;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'ksureddy@umich.edu' LIMIT 1;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'karthik' LIMIT 1;
+Executing (default): SELECT `roles`.`id`, `roles`.`name`, `roles`.`createdAt`, `roles`.`updatedAt`, `user_roles`.`createdAt` AS `user_roles.createdAt`, `user_roles`.`updatedAt` AS `user_roles.updatedAt`, `user_roles`.`roleId` AS `user_roles.roleId`, `user_roles`.`userId` AS `user_roles.userId` FROM `roles` AS `roles` INNER JOIN `user_roles` AS `user_roles` ON `roles`.`id` = `user_roles`.`roleId` AND `user_roles`.`userId` = 2;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'karthik' LIMIT 1;
+Executing (default): SELECT `roles`.`id`, `roles`.`name`, `roles`.`createdAt`, `roles`.`updatedAt`, `user_roles`.`createdAt` AS `user_roles.createdAt`, `user_roles`.`updatedAt` AS `user_roles.updatedAt`, `user_roles`.`roleId` AS `user_roles.roleId`, `user_roles`.`userId` AS `user_roles.userId` FROM `roles` AS `roles` INNER JOIN `user_roles` AS `user_roles` ON `roles`.`id` = `user_roles`.`roleId` AND `user_roles`.`userId` = 2;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'ksureddy@umich.edu' LIMIT 1;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'ksureddy@umich.edu' LIMIT 1;
+Executing (default): INSERT INTO `users` (`id`,`username`,`email`,`password`,`question`,`answer`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?);
+Executing (default): SELECT `createdAt`, `updatedAt`, `roleId`, `userId` FROM `user_roles` AS `user_roles` WHERE `user_roles`.`userId` = 4;
+Executing (default): INSERT INTO `user_roles` (`createdAt`,`updatedAt`,`roleId`,`userId`) VALUES ('2023-04-06 21:23:29','2023-04-06 21:23:29',1,4);
+(node:6147) UnhandledPromiseRejectionWarning: Error
+    at Query.run (/home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/sequelize.js:314:28
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async MySQLQueryInterface.bulkInsert (/home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/dialects/abstract/query-interface.js:346:21)
+    at async recursiveBulkCreate (/home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/model.js:1663:25)
+    at async Function.bulkCreate (/home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/model.js:1752:12)
+    at async Promise.all (index 0)
+    at async BelongsToMany.set (/home/vkarthi/DendroStock-API-main/node_modules/sequelize/lib/associations/belongs-to-many.js:452:14)
+(node:6147) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 2)
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'ksureddy@umich.edu' LIMIT 1;
+Executing (default): SELECT `roles`.`id`, `roles`.`name`, `roles`.`createdAt`, `roles`.`updatedAt`, `user_roles`.`createdAt` AS `user_roles.createdAt`, `user_roles`.`updatedAt` AS `user_roles.updatedAt`, `user_roles`.`roleId` AS `user_roles.roleId`, `user_roles`.`userId` AS `user_roles.userId` FROM `roles` AS `roles` INNER JOIN `user_roles` AS `user_roles` ON `roles`.`id` = `user_roles`.`roleId` AND `user_roles`.`userId` = 4;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'karthik' LIMIT 1;
+Executing (default): SELECT `roles`.`id`, `roles`.`name`, `roles`.`createdAt`, `roles`.`updatedAt`, `user_roles`.`createdAt` AS `user_roles.createdAt`, `user_roles`.`updatedAt` AS `user_roles.updatedAt`, `user_roles`.`roleId` AS `user_roles.roleId`, `user_roles`.`userId` AS `user_roles.userId` FROM `roles` AS `roles` INNER JOIN `user_roles` AS `user_roles` ON `roles`.`id` = `user_roles`.`roleId` AND `user_roles`.`userId` = 2;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'karthik' LIMIT 1;
+Executing (default): SELECT `roles`.`id`, `roles`.`name`, `roles`.`createdAt`, `roles`.`updatedAt`, `user_roles`.`createdAt` AS `user_roles.createdAt`, `user_roles`.`updatedAt` AS `user_roles.updatedAt`, `user_roles`.`roleId` AS `user_roles.roleId`, `user_roles`.`userId` AS `user_roles.userId` FROM `roles` AS `roles` INNER JOIN `user_roles` AS `user_roles` ON `roles`.`id` = `user_roles`.`roleId` AND `user_roles`.`userId` = 2;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+{
+  title: 'Jade',
+  description: 'Crassulaceae',
+  type: 'Outdoor Plant',
+  price: '32.90',
+  published: true
+}
+Executing (default): INSERT INTO `plants` (`id`,`title`,`description`,`type`,`price`,`published`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?);
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+{
+  title: 'Jasmine',
+  description: 'Oleaceae',
+  type: 'Outdoor Plant',
+  price: '89.34',
+  published: true
+}
+Executing (default): INSERT INTO `plants` (`id`,`title`,`description`,`type`,`price`,`published`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?);
+{
+  title: 'Peacock Plant',
+  description: 'Calathea makoyana',
+  type: 'Indoor Plant',
+  price: '39.99',
+  published: true
+}
+Executing (default): INSERT INTO `plants` (`id`,`title`,`description`,`type`,`price`,`published`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?);
+{
+  title: 'sanke Plant',
+  description: 'Asparagaceae',
+  type: 'Indoor Plant',
+  price: '23.76',
+  published: true
+}
+Executing (default): INSERT INTO `plants` (`id`,`title`,`description`,`type`,`price`,`published`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?);
+{
+  title: 'Lotus',
+  description: 'Nelumbonaceae',
+  type: 'Water Plant',
+  price: '18.99',
+  published: true
+}
+Executing (default): INSERT INTO `plants` (`id`,`title`,`description`,`type`,`price`,`published`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?);
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'prakru' LIMIT 1;
+Executing (default): SELECT `roles`.`id`, `roles`.`name`, `roles`.`createdAt`, `roles`.`updatedAt`, `user_roles`.`createdAt` AS `user_roles.createdAt`, `user_roles`.`updatedAt` AS `user_roles.updatedAt`, `user_roles`.`roleId` AS `user_roles.roleId`, `user_roles`.`userId` AS `user_roles.userId` FROM `roles` AS `roles` INNER JOIN `user_roles` AS `user_roles` ON `roles`.`id` = `user_roles`.`roleId` AND `user_roles`.`userId` = 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'prakru' LIMIT 1;
+Executing (default): SELECT `roles`.`id`, `roles`.`name`, `roles`.`createdAt`, `roles`.`updatedAt`, `user_roles`.`createdAt` AS `user_roles.createdAt`, `user_roles`.`updatedAt` AS `user_roles.updatedAt`, `user_roles`.`roleId` AS `user_roles.roleId`, `user_roles`.`userId` AS `user_roles.userId` FROM `roles` AS `roles` INNER JOIN `user_roles` AS `user_roles` ON `roles`.`id` = `user_roles`.`roleId` AND `user_roles`.`userId` = 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'sample' LIMIT 1;
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`email` = 'sample@gmail.com' LIMIT 1;
+Executing (default): INSERT INTO `users` (`id`,`username`,`email`,`password`,`question`,`answer`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?);
+Executing (default): SELECT `createdAt`, `updatedAt`, `roleId`, `userId` FROM `user_roles` AS `user_roles` WHERE `user_roles`.`userId` = 5;
+Executing (default): INSERT INTO `user_roles` (`createdAt`,`updatedAt`,`roleId`,`userId`) VALUES ('2023-04-06 23:44:28','2023-04-06 23:44:28',1,5);
+Executing (default): SELECT `id`, `username`, `email`, `password`, `question`, `answer`, `createdAt`, `updatedAt` FROM `users` AS `users` WHERE `users`.`username` = 'karthik' LIMIT 1;
+Executing (default): SELECT `roles`.`id`, `roles`.`name`, `roles`.`createdAt`, `roles`.`updatedAt`, `user_roles`.`createdAt` AS `user_roles.createdAt`, `user_roles`.`updatedAt` AS `user_roles.updatedAt`, `user_roles`.`roleId` AS `user_roles.roleId`, `user_roles`.`userId` AS `user_roles.userId` FROM `roles` AS `roles` INNER JOIN `user_roles` AS `user_roles` ON `roles`.`id` = `user_roles`.`roleId` AND `user_roles`.`userId` = 2;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 3;
+Executing (default): SELECT count(*) AS `count` FROM `plants` AS `plant`;
+Executing (default): SELECT `id`, `title`, `description`, `type`, `price`, `published`, `createdAt`, `updatedAt` FROM `plants` AS `plant` LIMIT 0, 6;
